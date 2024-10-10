@@ -9,12 +9,12 @@ docker-pull:
 	docker pull ${IMAGE_NAME}
 docker-run:
 	docker run --rm -it --network host -w /working -v $$(pwd):/working  ${IMAGE_NAME} bash
+docker-rmi:
+	docker rmi ${IMAGE_NAME}
 
 jupyterlab:
 	jupyter lab --allow-root
 
-python:
-	import this
 c11:
 	python 'Ex_Files_Python_EssT/Exercise Files/exercise_files/11_1_writefile.py' --output x -t x
 
