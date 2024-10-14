@@ -1,3 +1,4 @@
+# https://www.linkedin.com/learning/python-essential-training-18764650
 # https://github.com/LinkedInLearning/python-ET-4314028
 
 IMAGE_NAME=siakhooi/python-essential-training:202410

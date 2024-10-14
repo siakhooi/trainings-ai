@@ -1,3 +1,6 @@
+# https://www.linkedin.com/learning/level-up-python
+# https://github.com/LinkedInLearning/level-up-python-3210418
+
 SHELL := /bin/bash
 
 IMAGE_NAME=siakhooi/level-up-python:202410

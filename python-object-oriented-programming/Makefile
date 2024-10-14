@@ -1,5 +1,6 @@
+# https://www.linkedin.com/learning/python-object-oriented-programming-22888296
 # https://github.com/LinkedinLearning/python-object-oriented-programming-4413110
-# https://docs.python.org/3/reference/datamodel.html
+
 SHELL := /bin/bash
 
 IMAGE_NAME=siakhooi/python-object-oriented-programming:202410
