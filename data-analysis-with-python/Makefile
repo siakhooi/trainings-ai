@@ -1,7 +1,5 @@
 # https://cognitiveclass.ai/courses/data-analysis-python
 
-SHELL := /bin/bash
-
 IMAGE_NAME=siakhooi/data-analysis-with-python:202311
 docker-build:
 	docker build . -t ${IMAGE_NAME}
