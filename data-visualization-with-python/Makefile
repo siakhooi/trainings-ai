@@ -1,7 +1,5 @@
 # https://cognitiveclass.ai/courses/data-visualization-python
 
-#SHELL := /bin/bash
-
 IMAGE_NAME=siakhooi/data-visualization-with-python:202312
 docker-build:
 	docker build . -t ${IMAGE_NAME}
@@ -31,31 +29,3 @@ clean:
 prepare:
 	python lab1-prepare.py
 	python lab2-prepare.py
-
-# Syllabus
-# Module 1 - Introduction to Visualization Tools
-# Introduction to Data Visualization
-# Introduction to Matplotlib
-# Basic Plotting with Matplotlib
-# Dataset on Immigration to Canada
-# Line Plots
-
-# Module 2 - Basic Visualization Tools
-# Area Plots
-# Histograms
-# Bar Charts
-
-# Module 3 - Specialized Visualization Tools
-# Pie Charts
-# Box Plots
-# Scatter Plots
-
-# Module 4 - Extra Visualization Tools
-# Waffle Charts
-# Word Clouds
-# Seaborn and Regression Plots
-
-# Module 5 - Creating Maps and Visualizing Geospatial Data
-# Introduction to Folium
-# Maps with Markers
-# Choropleth Maps
