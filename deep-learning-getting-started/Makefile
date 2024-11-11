@@ -1,4 +1,4 @@
-# https://www.linkedin.com/learning/introduction-to-prompt-engineering-for-generative-ai-2023
+# https://www.linkedin.com/learning/deep-learning-getting-started/getting-started-with-deep-learning
 
 IMAGE_NAME=siakhooi/deep-learning-getting-started:202403
 docker-build:

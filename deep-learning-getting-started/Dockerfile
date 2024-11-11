@@ -5,5 +5,4 @@ RUN apt update -y &&  \
     apt install make -y && \
     apt clean && \
     pip install jupyterlab matplotlib pandas scikit-learn tensorflow && \
-    pip install nltk && \
-    pip install tensorflow
+    pip install nltk
