@@ -1,4 +1,4 @@
-# https://www.linkedin.com/learning/deep-learning-getting-started/getting-started-with-deep-learning
+# https://www.linkedin.com/learning/deep-learning-getting-started
 
 IMAGE_NAME=siakhooi/deep-learning-getting-started:202403
 docker-build:
