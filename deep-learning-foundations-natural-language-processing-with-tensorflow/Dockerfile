@@ -6,6 +6,3 @@ RUN apt update -y &&  \
     apt clean && \
     pip install jupyterlab numpy pandas tensorflow tensorflow_datasets && \
     pip install google matplotlib
-
-    # pip install matplotlib scikit-learn
-    # pip install nltk
