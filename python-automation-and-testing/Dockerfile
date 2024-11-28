@@ -1,7 +1,5 @@
-FROM python:3.12.7-slim-bullseye
+FROM trainings-ai-base:latest
 
-RUN apt update -y &&  \
-    apt upgrade -y && \
-    apt install make curl -y && \
+RUN apt install curl -y && \
     apt clean && \
     pip install selenium

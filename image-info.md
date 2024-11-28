@@ -1,4 +1,5 @@
-## trainings-ai-base:latest
+# trainings-ai-base:latest
+# FROM trainings-ai-base:latest
 
 FROM python:3.12.7-slim-bullseye
 
@@ -10,41 +11,62 @@ RUN apt update -y &&  \
 ## python-object-oriented-programming
    # apt install make -y && \
 
-########################################################################################
-
-# python-automation-and-testing
-    apt install make curl -y && \
-    pip install selenium
-
 # python-essential-training
+   #  apt install make -y && \
     pip install jupyterlab multiprocess
 
-
 # level-up-python
-    apt install make unzip -y && \
+#    apt install make -y && \
+    apt install unzip -y && \
 
-# artificial-intelligence-foundations-neural-networks
+# python-automation-and-testing
+   # apt install make -y && \
+    apt install curl -y && \
+    pip install selenium
 
-    apt install make -y && \
+# training-neural-networks-in-python
+   # apt install make -y && \
+    pip install numpy
+
+## artificial-intelligence-foundations-neural-networks
+   # apt install make -y && \
     pip install matplotlib numpy pandas scikit-learn seaborn tensorflow
 
-# building-computer-vision-applications-with-python
-    apt install make -y && \
-    apt install ffmpeg libsm6 libxext6 -y && \
-    pip install matplotlib numpy opencv-python
+## recurrent-neural-networks
+   # apt install make -y && \
+   pip install keras matplotlib numpy pandas sklearn tensorflow
+
+# machine-learning-foundations-linear-algebra
+   # apt install make -y && \
+    pip install jupyterlab numpy
+
+## pandas-essential-training
+   # apt install make -y && \
+   RUN apt install wget -y
+   RUN pip install jupyterlab pandas
+
+
+
+
+########################################################################################
+
 
 # data-analysis-with-python
     apt install make -y && \
     pip install jupyterlab matplotlib numpy pandas scikit-learn scipy seaborn skillsnetwork statsmodels tqdm
 
+# python-for-data-science
+    apt install make -y && \
+    pip install ibm_watson jupyterlab matplotlib pandas
+
 # data-visualization-with-python
     apt install make curl -y && \
     pip install folium jupyterlab matplotlib numpy openpyxl pandas pywaffle seaborn wordcloud
 
-# deep-learning-foundations-natural-language-processing-with-tensorflow
-    apt install make wget -y && \
-    pip install jupyterlab numpy pandas tensorflow tensorflow_datasets && \
-    pip install google matplotlib
+# building-computer-vision-applications-with-python
+    apt install make -y && \
+    apt install ffmpeg libsm6 libxext6 -y && \
+    pip install matplotlib numpy opencv-python
 
 
 # deep-learning-getting-started
@@ -63,17 +85,6 @@ RUN apt update -y &&  \
     apt install make -y && \
     pip install openai
 
-# machine-learning-foundations-linear-algebra
-    apt install make -y && \
-    pip install jupyterlab numpy
-
-# machine-learning-with-python
-    apt install make curl unzip -y && \
-    pip install jupyterlab && \
-    pip install matplotlib numpy scipy && \
-    pip install pandas scikit-learn && \
-    pip install basemap
-
 # oci-generative-ai-professional
     apt install make -y && \
     pip install jupyterlab && \
@@ -83,17 +94,40 @@ RUN apt update -y &&  \
     pip install ads chromadb streamlit && \
     pip install langsmith
 
-# python-for-data-science
-    apt install make -y && \
-    pip install ibm_watson jupyterlab matplotlib pandas
+# deep-learning-foundations-natural-language-processing-with-tensorflow
+    apt install make wget -y && \
+    pip install jupyterlab numpy pandas tensorflow tensorflow_datasets && \
+    pip install google matplotlib
 
-# training-neural-networks-in-python
-    apt install make -y && \
-    pip install numpy
+
+# machine-learning-with-python
+    apt install make curl unzip -y && \
+    pip install jupyterlab && \
+    pip install matplotlib numpy scipy && \
+    pip install pandas scikit-learn && \
+    pip install basemap
 
 # unit-testing-in-python
   pip -r requirements.txt
 
-# recurrent-neural-networks
-    apt install make -y && \
-    pip install keras matplotlib numpy pandas sklearn tensorflow
+
+# numpy              2.1.3        43M
+
+# pandas           2.2.3         76M
+# pytz             2024.2       2.8M
+# tzdata           2024.2       2.8M
+
+# matplotlib  8.3M
+# fonttools   4.9M
+# pillow      4.4M
+# kiwisolver  1.5 MB
+
+
+# selenium           4.25.0       29M
+
+# jupyterlab                 4.3.1           21M
+# babel                      2.16.0          31M
+# debugpy                    1.8.9           26M
+# jedi                       0.19.2          12M
+# setuptools                 75.6.0          11M
+
