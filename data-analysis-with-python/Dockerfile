@@ -1,7 +1,3 @@
-FROM python:3.12.7-slim-bullseye
+FROM trainings-ai-data:latest
 
-RUN apt update -y &&  \
-    apt upgrade -y && \
-    apt install make -y && \
-    apt clean && \
-    pip install jupyterlab matplotlib numpy pandas scikit-learn scipy seaborn skillsnetwork statsmodels tqdm
+RUN pip install jupyterlab scikit-learn scipy skillsnetwork statsmodels tqdm
