@@ -9,9 +9,11 @@ np.random.seed(1)
 #Load the Meta stock price data from CSV
 prices = pd.read_csv('FB-stock-prices.csv')
 
+
 #Review loaded data
-print(prices.dtypes)
-prices.head()
+#print(prices.dtypes)
+#prices.head()
+print(f'prices: {prices.shape}')
 
 # Plot the data to visualize the stock price
 
@@ -30,9 +32,12 @@ from sklearn.preprocessing import StandardScaler
 # Scale the Data
 scaler = StandardScaler()
 scaled_prices=scaler.fit_transform(prices[["Price"]].values)
+pd.DataFrame(scaled_prices).to_csv('scaled_prices.csv', index=False)
 
 #Split data into Training and Test sets
 total_size = len(scaled_prices)
+
+print(f'scaled_prices: {scaled_prices.shape}: {total_size}')
 
 #Test dataset size
 test_size = 50
@@ -45,8 +50,7 @@ training_prices = scaled_prices[0:train_size,:]
 test_prices = scaled_prices[train_size:,:]
 
 print(training_prices.shape, test_prices.shape)
-
-
+print(f'training: {training_prices.shape}, test: {test_prices.shape}')
 
 
 ## 03.03 Create Dataset for RNN
@@ -64,6 +68,7 @@ def create_rnn_dataset(data, lookback=1):
             data_x.append(a)
             #The next point
             data_y.append(data[i + lookback, 0])
+
     return np.array(data_x), np.array(data_y)
 
 #lookback for 25 previous days
@@ -72,14 +77,13 @@ lookback=25
 #Create X and Y for training
 train_req_x, train_req_y = create_rnn_dataset(training_prices,lookback)
 
+print("Shapes of X, Y (before): ",train_req_x.shape, train_req_y.shape)
+
 #Reshape for use with RNN
 train_req_x = np.reshape(train_req_x,
                          (train_req_x.shape[0],1, train_req_x.shape[1]))
 
 print("Shapes of X, Y: ",train_req_x.shape, train_req_y.shape)
-
-
-
 
 ## 03.04 Build the RNN Model
 
